@@ -1,0 +1,12 @@
+var game = game || {};
+game.rows = 7;
+game.pink = game.pink || {};
+game.pink.cells = [ '33', '42', '44', '52', '53', '43','32'];
+game.orange = game.orange || {};
+game.orange.cells = ['16', '17', '26', '27', '28', '36', '37'];
+game.pink.stars = ['13','16','33'];
+game.pink.trangles = ['26','44','57'];
+game.pink.reverseTriangles = [];
+game.orange.stars = ['09','27','32'];
+game.orange.trangles = [];
+game.orange.reverseTriangles = ['17','42','50'];
