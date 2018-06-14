@@ -9,4 +9,4 @@ game.pink.trangles = ['26','44','57'];
 game.pink.reverseTriangles = [];
 game.orange.stars = ['09','27','32'];
 game.orange.trangles = [];
-game.orange.reverseTriangles = ['17','42','50'];
+game.orange.reverseTriangles = ['17','42','22'];
