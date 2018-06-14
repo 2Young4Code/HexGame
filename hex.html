@@ -621,7 +621,7 @@ console.log(game);
         makemoving(obj)
         addonclick()
         addubleclick()
-		     document.getElementById('t' + obj.x + obj.y).classList.remove('pos');
+		     
 		
 
     }
@@ -665,7 +665,7 @@ var ids = gettevenMoves(obj)
                 }
             }
         }
-
+        document.getElementById('t' + obj.x + obj.y).classList.add('pos');
         document.getElementById('t' + obj.x + obj.y).classList.add('moving');
         
     }
