@@ -268,8 +268,8 @@ console.log(game);
         document.getElementsByTagName('body')[0].innerHTML = sum;
     }
     doo(game.rows, 10);
-    var player1 = game.orange.cells;//['16', '17', '26', '27', '28', '36', '37']
-    var player2 = game.pink.cells;//['32', '33', '42', '44', '52', '53', '43']
+    var player1 = game.orange.cells;
+    var player2 = game.pink.cells;
 
     var coler = function(aray1, aray2) {
 		 	
@@ -330,74 +330,6 @@ console.log(game);
 		}
 		}
 	
-		
-        // document.getElementById('t' + pic1[0]).classList.add('shape');
-        // document.getElementById('t' + pic1[0]).classList.add('star');
-        // document.getElementById('t' + pic1[0]).classList.add('orange');
-       // // document.getElementById('t' + pic1[0]).classList.remove('greybg');
-       // // document.getElementById('t' + pic1[0]).classList.add('pinkbg');
-
-        // document.getElementById('t' + pic1[1]).classList.add('shape');
-        // document.getElementById('t' + pic1[1]).classList.add('star');
-        // document.getElementById('t' + pic1[1]).classList.add('pink');
-        // //document.getElementById('t' + pic1[1]).classList.remove('greybg');
-        // //document.getElementById('t' + pic1[1]).classList.add('pinkbg');
-
-        // document.getElementById('t' + pic1[2]).classList.add('shape');
-        // document.getElementById('t' + pic1[2]).classList.add('reversetriangle');
-        // document.getElementById('t' + pic1[2]).classList.add('orange');
-        // document.getElementById('t' + pic1[2]).classList.remove('greybg');
-        // document.getElementById('t' + pic1[2]).classList.add('pinkbg');
-
-        // document.getElementById('t' + pic1[3]).classList.add('shape');
-        // document.getElementById('t' + pic1[3]).classList.add('triangle');
-        // document.getElementById('t' + pic1[3]).classList.add('pink');
-        // document.getElementById('t' + pic1[3]).classList.remove('greybg');
-        // document.getElementById('t' + pic1[3]).classList.add('pinkbg');
-
-        // document.getElementById('t' + pic2[0]).classList.add('shape');
-        // document.getElementById('t' + pic2[0]).classList.add('star');
-        // document.getElementById('t' + pic2[0]).classList.add('pink');
-        // document.getElementById('t' + pic2[0]).classList.remove('greybg');
-        // document.getElementById('t' + pic2[0]).classList.add('orangebg');
-
-        // document.getElementById('t' + pic2[1]).classList.add('shape');
-        // document.getElementById('t' + pic2[1]).classList.add('reversetriangle');
-        // document.getElementById('t' + pic2[1]).classList.add('orange');
-        // document.getElementById('t' + pic2[1]).classList.remove('greybg');
-        // document.getElementById('t' + pic2[1]).classList.add('orangebg');
-
-        // document.getElementById('t' + pic2[2]).classList.add('shape');
-        // document.getElementById('t' + pic2[2]).classList.add('triangle');
-        // document.getElementById('t' + pic2[2]).classList.add('pink');
-        // document.getElementById('t' + pic2[2]).classList.remove('greybg');
-        // document.getElementById('t' + pic2[2]).classList.add('orangebg');
-
-        // document.getElementById('t' + pic2[3]).classList.add('shape');
-        // document.getElementById('t' + pic2[3]).classList.add('star');
-        // document.getElementById('t' + pic2[3]).classList.add('orange');
-        // document.getElementById('t' + pic2[3]).classList.remove('greybg');
-        // document.getElementById('t' + pic2[3]).classList.add('orangebg');
-
-        // document.getElementById('t' + tile[0]).classList.add('shape');
-        // document.getElementById('t' + tile[0]).classList.add('star');
-        // document.getElementById('t' + tile[0]).classList.add('pink');
-        // document.getElementById('t' + tile[0]).classList.add('greybg');
-
-        // document.getElementById('t' + tile[1]).classList.add('shape');
-        // document.getElementById('t' + tile[1]).classList.add('star');
-        // document.getElementById('t' + tile[1]).classList.add('orange');
-        // document.getElementById('t' + tile[1]).classList.add('greybg');
-
-        // document.getElementById('t' + tile[2]).classList.add('shape');
-        // document.getElementById('t' + tile[2]).classList.add('triangle');
-        // document.getElementById('t' + tile[2]).classList.add('pink');
-        // document.getElementById('t' + tile[2]).classList.add('greybg');
-
-        // document.getElementById('t' + tile[3]).classList.add('shape');
-        // document.getElementById('t' + tile[3]).classList.add('reversetriangle');
-        // document.getElementById('t' + tile[3]).classList.add('orange');
-        // document.getElementById('t' + tile[3]).classList.add('greybg');
     }
     shapeclass();
 
@@ -437,8 +369,10 @@ console.log(game);
     }
     var newturn = function() {
       
+      
         var containsPink = this.classList.contains("pink");
         var containsstar = this.classList.contains("star");
+		var containstriangle = this.classList.contains("triangle");
         var row = this.id[1]
         var collom = this.id[2]
         var obj = {
@@ -451,6 +385,7 @@ console.log(game);
         backtonormal(obj)
     }
     var backtonormal = function(obj) {
+	
         if (obj.shape == 'triangle') {
             x = obj.x;
             y = obj.y;
