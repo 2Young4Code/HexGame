@@ -647,6 +647,7 @@ var ids = gettevenMoves(obj)
 		}
 	}
 	var fixingbugs2 =function(obj){
+	
 	 if(obj.coler == 'pink'){
 		var allShapes = document.getElementsByClassName('shape pink');
 		var notpos = [];
@@ -657,10 +658,20 @@ var ids = gettevenMoves(obj)
 		
 		}
 		for(var i = 0;i<notpos.length;i++){
+		
+		if(document.getElementById(allShapes[i].id).classList.contains("movedbefor") == false){
 		notpos[i].addEventListener('mouseover',funt)
 		notpos[i].addEventListener('mouseout',remt)
 		
 		notpos[i].addEventListener('click',domoving)
+		
+		}
+		if(document.getElementById(allShapes[i].id).classList.contains("movedbefor")){
+		notpos[i].removeEventListener('mouseover',funt)
+		notpos[i].removeEventListener('mouseout',remt)
+		notpos[i].removeEventListener('click',domoving)
+		document.getElementById(notpos[i].id).classList.remove('movedbefor')
+		}
 		
 		}
 		}
@@ -674,10 +685,18 @@ var ids = gettevenMoves(obj)
 		
 		}
 		for(var i = 0;i<notpos.length;i++){
+		if(document.getElementById(allShapes[i].id).classList.contains("movedbefor") == false){
 		notpos[i].addEventListener('mouseover',funt)
 		notpos[i].addEventListener('mouseout',remt)
 		
 		notpos[i].addEventListener('click',domoving)
+		}
+		if(document.getElementById(allShapes[i].id).classList.contains("movedbefor")){
+		notpos[i].removeEventListener('mouseover',funt)
+		notpos[i].removeEventListener('mouseout',remt)
+		notpos[i].removeEventListener('click',domoving)
+		document.getElementById(notpos[i].id).classList.remove('movedbefor')
+		}
 		
 		}
 		}
@@ -703,6 +722,7 @@ var ids = gettevenMoves(obj)
         if (document.getElementById('t' + obj.x + obj.y).classList.contains('pos') == false) {
             doonclick(obj)
 		document.getElementById('t' + obj.x + obj.y).classList.add('movedbefor')
+		
         winner(obj)
 		turns(obj)
         document.getElementsByClassName("pos")[0].classList.remove('pos')    
@@ -863,7 +883,8 @@ var ids = gettevenMoves(obj)
                     sum[i].removeEventListener("mouseout", remt)
                     sum[i].removeEventListener("click", makeonclick)
                     sum[i].removeEventListener("click", domoving)
-                    document.getElementById(sum[i].id).classList.remove('movedbefor')
+					
+                   
                 }
             }
         }
@@ -890,7 +911,7 @@ var ids = gettevenMoves(obj)
                     sum[i].removeEventListener("mouseout", remt)
                     sum[i].removeEventListener("click", makeonclick)
                     sum[i].removeEventListener("click", domoving)
-                    document.getElementById(sum[i].id).classList.remove('movedbefor')
+                    
                 }
             }
         }
