@@ -386,6 +386,7 @@ console.log(game);
 		
 		backtonormal(obj)
 		fixingbugs2(obj)
+		document.getElementById('t' + obj.x + obj.y).removeEventListener('click',newturn);
 
         
 		
@@ -434,7 +435,7 @@ console.log(game);
 			
             document.getElementById('t' + obj.x + obj.y).classList.remove('pos');
             document.getElementById('t' + obj.x + obj.y).classList.remove('moving');
-			document.getElementById('t' + obj.x + obj.y).removeEventListener('click',newturn);
+			
 			
         }
 		
@@ -572,7 +573,7 @@ console.log(game);
 		addonclick()
 		fixingbugs(obj)
 		addubleclick()
-		document.getElementById('t' + obj.x + obj.y).classList.remove('pos');
+		
 		
 		
 		
@@ -641,7 +642,8 @@ var ids = gettevenMoves(obj)
 		}
 	}
 	var fixingbugs2 =function(obj){
-		var allShapes = document.getElementsByClassName('shape');
+	 if(obj.coler == 'pink'){
+		var allShapes = document.getElementsByClassName('shape pink');
 		var notpos = [];
 		for(var i = 0;i<allShapes.length;i++){
 		if(document.getElementById(allShapes[i].id).classList.contains("pos") == false){
@@ -655,6 +657,24 @@ var ids = gettevenMoves(obj)
 		
 		notpos[i].addEventListener('click',domoving)
 		
+		}
+		}
+			 if(obj.coler == 'orange'){
+		var allShapes = document.getElementsByClassName('shape orange');
+		var notpos = [];
+		for(var i = 0;i<allShapes.length;i++){
+		if(document.getElementById(allShapes[i].id).classList.contains("pos") == false){
+		notpos.push(allShapes[i])
+		}
+		
+		}
+		for(var i = 0;i<notpos.length;i++){
+		notpos[i].addEventListener('mouseover',funt)
+		notpos[i].addEventListener('mouseout',remt)
+		
+		notpos[i].addEventListener('click',domoving)
+		
+		}
 		}
 	}
 	
@@ -677,10 +697,12 @@ var ids = gettevenMoves(obj)
 		
         if (document.getElementById('t' + obj.x + obj.y).classList.contains('pos') == false) {
             doonclick(obj)
-            document.getElementById('t' + obj.x + obj.y).classList.add('movedbefor')
-            winner(obj)
-            turns(obj)
+		document.getElementById('t' + obj.x + obj.y).classList.add('movedbefor')
+        winner(obj)
+		turns(obj)
+            
         }
+
 		
     }
     var doonclick = function(obj) {
