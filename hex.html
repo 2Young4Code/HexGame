@@ -18,14 +18,12 @@ console.log(game);
         x = obj.x;
         y = obj.y;
         var ids = [];
-
         x = x - 1
         if (x > -1 && x < 10 && y > -1 && y < 10) {
             var sum = 't' + x + y
             ids.push(document.getElementById(sum).id)
         }
         x = x + 1;
-
         x = x - 1;
         y = Number(y) + 1;
         if (x > -1 && x < 10 && y > -1 && y < 10) {
@@ -34,28 +32,24 @@ console.log(game);
         }
         x = x + 1;
         y = y - 1;
-
         y = y - 1;
         if (x > -1 && x < 10 && y > -1 && y < 10) {
             var sum = 't' + x + y
             ids.push(document.getElementById(sum).id)
         }
         y = y + 1;
-
         y = Number(y) + 1
         if (x > -1 && x < 10 && y > -1 && y < 10) {
             var sum = 't' + x + y
             ids.push(document.getElementById(sum).id)
         }
         y = y - 1;
-
         x = Number(x) + 1;
         if (x > -1 && x < 10 && y > -1 && y < 10) {
             var sum = 't' + x + y
             ids.push(document.getElementById(sum).id)
         }
         x = x - 1;
-
         x = Number(x) + 1;
         y = Number(y) + 1
         if (x > -1 && x < 10 && y > -1 && y < 10) {
@@ -64,23 +58,18 @@ console.log(game);
         }
         x = x - 1;
         y = y - 1;
-
         return ids;
-
     }
-
     var getevenStarMoves = function(obj) {
         x = obj.x;
         y = obj.y;
         var ids = [];
-
         y = Number(y) + 1
         if (x > -1 && x < 10 && y > -1 && y < 10) {
             var sum = 't' + x + y
             ids.push(document.getElementById(sum).id)
         }
         y = y - 1
-
         x = Number(x) + 1;
         y = y - 1
         if (x > -1 && x < 10 && y > -1 && y < 10) {
@@ -89,21 +78,18 @@ console.log(game);
         }
         x = x - 1;
         y = y + 1
-
         x = Number(x) + 1;
         if (x > -1 && x < 10 && y > -1 && y < 10) {
             var sum = 't' + x + y
             ids.push(document.getElementById(sum).id)
         }
         x = x - 1;
-
         y = y - 1
         if (x > -1 && x < 10 && y > -1 && y < 10) {
             var sum = 't' + x + y
             ids.push(document.getElementById(sum).id)
         }
         y = y + 1
-
         x = x - 1;
         y = Number(y) - 1;
         if (x > -1 && x < 10 && y > -1 && y < 10) {
@@ -112,18 +98,14 @@ console.log(game);
         }
         x = x + 1;
         y = y + 1;
-
         x = x - 1
         if (x > -1 && x < 10 && y > -1 && y < 10) {
             var sum = 't' + x + y
             ids.push(document.getElementById(sum).id)
         }
         x = x + 1
-
         return ids;
-
     }
-
     var gettMoves = function(obj) {
         x = obj.x;
         y = obj.y;
@@ -134,7 +116,6 @@ console.log(game);
             ids.push(document.getElementById(sum).id)
         }
         x = x + 2;
-
         x = Number(x) + 1;
         y = y - 1;
         if (x > -1 && x < 10 && y > -1 && y < 10) {
@@ -143,7 +124,6 @@ console.log(game);
         }
         x = x - 1;
         y = Number(y) + 1;
-
         x = Number(x) + 1;
         y = Number(y) + 2
         if (x > -1 && x < 10 && y > -1 && y < 10) {
@@ -154,7 +134,6 @@ console.log(game);
         y = y - 2
         return ids;
     }
-
     var getreverstMoves = function(obj) {
         x = obj.x;
         y = obj.y;
@@ -165,7 +144,6 @@ console.log(game);
             ids.push(document.getElementById(sum).id)
         }
         x = x - 2;
-
         x = Number(x) - 1;
         y = y - 1;
         if (x > -1 && x < 10 && y > -1 && y < 10) {
@@ -174,7 +152,6 @@ console.log(game);
         }
         x = x + 1;
         y = Number(y) + 1;
-
         x = Number(x) - 1;
         y = Number(y) + 2
         if (x > -1 && x < 10 && y > -1 && y < 10) {
@@ -195,7 +172,6 @@ console.log(game);
             ids.push(document.getElementById(sum).id)
         }
         x = x - 2;
-
         x = Number(x) - 1;
         y = y - 2;
         if (x > -1 && x < 10 && y > -1 && y < 10) {
@@ -204,7 +180,6 @@ console.log(game);
         }
         x = Number(x) + 1;
         y = Number(y) + 2;
-
         x = Number(x) - 1;
         y = Number(y) + 1
         if (x > -1 && x < 10 && y > -1 && y < 10) {
@@ -215,13 +190,10 @@ console.log(game);
         y = y - 1
         return ids;
     }
-
-
     var gettevenMoves = function(obj) {
         x = obj.x;
         y = obj.y;
         var ids = [];
-
         x = Number(x) + 1;
         y = y - 2;
         if (x > -1 && x < 10 && y > -1 && y < 10) {
@@ -230,7 +202,6 @@ console.log(game);
         }
         x = x - 1;
         y = y + 2;
-
         x = Number(x) + 1;
         y = Number(y) + 1;
         if (x > -1 && x < 10 && y > -1 && y < 10) {
@@ -239,7 +210,6 @@ console.log(game);
         }
         x = x - 1;
         y = y - 1;
-
         x = Number(x) - 2;
         if (x > -1 && x < 10 && y > -1 && y < 10) {
             var sum = 't' + x + y
@@ -247,19 +217,13 @@ console.log(game);
         }
         x = x + 2;
         return ids;
-
     }
-
-
-
     var doo = function(row, collom) {
 		 	
         //var howmany = row; 
         var sum = "";
         for (var y = 0; y < (row); y++) {
-
             sum += '<ul class="hexGrid" >'
-
             for (var i = 0; i < collom; i++) {
                 sum += '<li class="hex"><div class="hexIn"> <a class="hexLink" href="#"><img src="grey.jpg" class="greybg" id = "t' + y + i + '" alt="" /></a></div></li>'
             }
@@ -270,7 +234,6 @@ console.log(game);
     doo(game.rows, 10);
     var player1 = game.orange.cells;
     var player2 = game.pink.cells;
-
     var coler = function(aray1, aray2) {
 		 	
         for(var i = aray1.length-1;i>=0;i--){
@@ -284,16 +247,13 @@ console.log(game);
 		 
 	 document.getElementById('t' + aray2[i]).classList.remove('greybg');
 	 document.getElementById('t' + aray2[i]).classList.add('pinkbg');
-
 	 }
 	  
     }
     coler(player1, player2)
-
     var pic1 = ['32', '33', '42', '44']
     var pic2 = ['16', '17', '26', '27']
     var tile = ['12', '09', '57', '50']
-
     var shapeclass = function() {
 		
 		var pinkStars = game.pink.stars;
@@ -332,7 +292,6 @@ console.log(game);
 	
     }
     shapeclass();
-
     var addmoseovert = function() {
         var allShapes = document.getElementsByClassName('shape');
         for (var i = 0; i < allShapes.length; i++) {
@@ -344,8 +303,6 @@ console.log(game);
         for (var i = 0; i < allShapes.length; i++) {
             allShapes[i].addEventListener("mouseout", remt);
         }
-
-
     }
     var addmoving = function() {
         var allShapes = document.getElementsByClassName('shape');
@@ -358,16 +315,13 @@ console.log(game);
         for (var i = 0; i < move.length; i++) {
             move[i].addEventListener("click", makeonclick);
         }
-
     }
     var addubleclick = function() {
         var move = document.getElementsByClassName('pos');
         for (var i = 0; i < move.length; i++) {
             move[i].addEventListener("click", newturn);
         }
-
     }
-
     var newturn = function() {
        debugger;
       
@@ -395,13 +349,11 @@ console.log(game);
 		
 		
 		
-
         
 		
 		
     }
     var backtonormal = function(obj) {
-
         if (obj.shape == 'triangle') {
             x = obj.x;
             y = obj.y;
@@ -464,9 +416,7 @@ console.log(game);
         };
         console.log(obj);
         tmoveall(obj)
-
     }
-
     var tmoveall = function(obj) {
         if (obj.shape == 'triangle') {
             x = obj.x;
@@ -559,13 +509,11 @@ console.log(game);
             }
         }
     }
-
     var domoving = function() {
         
         var containsPink = this.classList.contains("pink");
         var containsstar = this.classList.contains("star");
         var containstriangle = this.classList.contains("triangle");
-
         var row = this.id[1]
         var collom = this.id[2]
         var obj = {
@@ -581,9 +529,7 @@ console.log(game);
 		addonclick()
 		fixingbugs(obj)
 		addubleclick()
-
 			
-
     }
 var makemoving = function(obj) {
 if (obj.shape == 'triangle') {
@@ -617,11 +563,9 @@ var ids = gettevenMoves(obj)
         if (ids != undefined) {
             console.log(ids);
             for (var i = 0; i < ids.length; i++) {
-
                 if (document.getElementById(ids[i]).classList.contains("shape") == false) {
                     document.getElementById(ids[i]).classList.add("shape")
                     document.getElementById(ids[i]).classList.add("moving")
-
                 }
             }
         }
@@ -707,7 +651,6 @@ var ids = gettevenMoves(obj)
         var containsPink = this.classList.contains("pink");
         var containsstar = this.classList.contains("star");
         var containstriangle = this.classList.contains("triangle");
-
         var row = this.id[1]
         var collom = this.id[2]
         var obj = {
@@ -717,15 +660,25 @@ var ids = gettevenMoves(obj)
             y: collom
         };
         console.log(obj);
-
 		
         if (document.getElementById('t' + obj.x + obj.y).classList.contains('pos') == false) {
             doonclick(obj)
+
 		document.getElementById('t' + obj.x + obj.y).classList.add('movedbefor')
+
 		
         winner(obj)
 		turns(obj)
-        document.getElementsByClassName("pos")[0].classList.remove('pos')    
+        document.getElementsByClassName("pos")[0].classList.remove('pos')   
+var mbo = document.getElementsByClassName("orange movedbefor");
+for(var i = 0;i<mbo.length;i++){
+if(mbo[i].id != 't'+ obj.x + obj.y){mbo[i].classList.remove('movedbefor')}
+}
+var mbp = document.getElementsByClassName("pink movedbefor");
+for(var i = 0;i<mbp.length;i++){
+if(mbp[i].id != 't'+ obj.x + obj.y){mbp[i].classList.remove('movedbefor')}
+}				
+		
     }
 	
 	
@@ -743,11 +696,9 @@ var ids = gettevenMoves(obj)
             if (move.length != 0) {
                 for (var i = move.length - 1; i >= 0; i--) {
                     if (move[i].id != 't' + x + y) {
-
                         move[i].removeEventListener("mouseover", funt)
                         move[i].removeEventListener("mouseout", remt)
                         move[i].removeEventListener("click", domoving)
-
                         move[i].classList.remove(obj.shape);
                         move[i].classList.remove(obj.coler);
                         move[i].classList.remove('shape');
@@ -757,10 +708,8 @@ var ids = gettevenMoves(obj)
                         move[i].addEventListener("mouseover", funt)
                         move[i].addEventListener("mouseout", remt)
                         move[i].addEventListener("click", domoving)
-
                         move[i].classList.remove('moving');
 						
-
                     }
                 }
             }
@@ -777,11 +726,9 @@ var ids = gettevenMoves(obj)
             if (move.length != 0) {
                 for (var i = move.length - 1; i >= 0; i--) {
                     if (move[i].id != 't' + x + y) {
-
                         move[i].removeEventListener("mouseover", funt)
                         move[i].removeEventListener("mouseout", remt)
                         move[i].removeEventListener("click", domoving)
-
                         move[i].classList.remove(obj.shape);
                         move[i].classList.remove(obj.coler);
                         move[i].classList.remove('shape');
@@ -791,10 +738,8 @@ var ids = gettevenMoves(obj)
                         move[i].addEventListener("mouseover", funt)
                         move[i].addEventListener("mouseout", remt)
                         move[i].addEventListener("click", domoving)
-
                         move[i].classList.remove('moving');
 						
-
                     }
                 }
             }
@@ -811,11 +756,9 @@ var ids = gettevenMoves(obj)
             if (move.length != 0) {
                 for (var i = move.length - 1; i >= 0; i--) {
                     if (move[i].id != 't' + x + y) {
-
                         move[i].removeEventListener("mouseover", funt)
                         move[i].removeEventListener("mouseout", remt)
                         move[i].removeEventListener("click", domoving)
-
                         move[i].classList.remove(obj.shape);
                         move[i].classList.remove(obj.coler);
                         move[i].classList.remove('shape');
@@ -825,10 +768,8 @@ var ids = gettevenMoves(obj)
                         move[i].addEventListener("mouseover", funt)
                         move[i].addEventListener("mouseout", remt)
                         move[i].addEventListener("click", domoving)
-
                         move[i].classList.remove('moving');
 						
-
                     }
                 }
             }
@@ -838,29 +779,23 @@ var ids = gettevenMoves(obj)
         if (obj.coler == 'orange') {
             var sum = document.getElementsByClassName('orange pinkbg')
             if (sum.length == 6) {
-
                 if (confirm('orange wins\nwant to play again ') == true) {
                     document.location.reload()
                 }
-
             }
         }
-
         if (obj.coler == 'pink') {
             var sum = document.getElementsByClassName('pink orangebg')
             if (sum.length == 6) {
-
                 if (confirm('pink wins\nwant to play again') == true) {
                     document.location.reload()
                 }
-
             }
         }
     }
     var turns = function(obj) {
         x = obj.x;
         y = obj.y;
-
         if (obj.coler == 'orange') {
             var sum = document.getElementsByClassName('orange');
             for (var i = 0; i < sum.length; i++) {
@@ -869,7 +804,6 @@ var ids = gettevenMoves(obj)
                 sum[i].removeEventListener("click", makeonclick)
                 sum[i].removeEventListener("click", domoving)
             }
-
             var sum = document.getElementsByClassName('pink');
             for (var i = 0; i < sum.length; i++) {
                 if (document.getElementById(sum[i].id).classList.contains('movedbefor') == false) {
@@ -888,7 +822,6 @@ var ids = gettevenMoves(obj)
                 }
             }
         }
-
         if (obj.coler == 'pink') {
             var sum = document.getElementsByClassName('pink');
             for (var i = 0; i < sum.length; i++) {
@@ -897,7 +830,6 @@ var ids = gettevenMoves(obj)
                 sum[i].removeEventListener("click", makeonclick)
                 sum[i].removeEventListener("click", domoving)
             }
-
             var sum = document.getElementsByClassName('orange');
             for (var i = 0; i < sum.length; i++) {
                 if (document.getElementById(sum[i].id).classList.contains('movedbefor') == false) {
@@ -916,8 +848,6 @@ var ids = gettevenMoves(obj)
             }
         }
     }
-
-
     addmoseoutt()
     addmoseovert()
    addmoving()
@@ -927,22 +857,17 @@ var ids = gettevenMoves(obj)
     .hexGrid:nth-child(even) {
         margin-bottom: -58px;
     }
-
-
     .hexGrid:nth-child(odd) {
         margin-left: 7px;
         margin-bottom: -58px;
     }
-
     * {
         margin: 0;
         padding: 0;
     }
-
     body {
         background: rgb(123, 158, 158);
     }
-
     .hexGrid {
         display: flex;
         flex-wrap: wrap;
@@ -953,21 +878,18 @@ var ids = gettevenMoves(obj)
         font-size: 15px;
         list-style-type: none;
     }
-
     .hex {
         position: relative;
         visibility: hidden;
         outline: 1px solid transparent;
         /* fix for jagged edges in FF on hover transition */
     }
-
     .hex::after {
         content: '';
         display: block;
         padding-bottom: 86.602%;
         /* =  100 / tan(60) * 1.5 */
     }
-
     .hexIn {
         position: absolute;
         width: 96%;
@@ -982,14 +904,12 @@ var ids = gettevenMoves(obj)
         -ms-transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
         transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
     }
-
     .hexIn * {
         position: absolute;
         visibility: visible;
         outline: 1px solid transparent;
         /* fix for jagged edges in FF on hover transition */
     }
-
     .hexLink {
         display: block;
         width: 100%;
@@ -1001,9 +921,7 @@ var ids = gettevenMoves(obj)
         -ms-transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
         transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
     }
-
     /*** HEX CONTENT **********************************************************************/
-
     .hex img {
         left: -100%;
         right: -100%;
@@ -1014,7 +932,6 @@ var ids = gettevenMoves(obj)
         -ms-transform: rotate3d(0, 0, 0, 0deg);
         transform: rotate3d(0, 0, 0, 0deg);
     }
-
     .hex h1,
     .hex p {
         width: 100%;
@@ -1025,7 +942,6 @@ var ids = gettevenMoves(obj)
         -webkit-transition: -webkit-transform .2s ease-out, opacity .3s ease-out;
         transition: transform .2s ease-out, opacity .3s ease-out;
     }
-
     .hex h1 {
         bottom: 50%;
         padding-top: 50%;
@@ -1035,7 +951,6 @@ var ids = gettevenMoves(obj)
         -ms-transform: translate3d(0, -100%, 0);
         transform: translate3d(0, -100%, 0);
     }
-
     .hex h1::after {
         content: '';
         position: absolute;
@@ -1045,7 +960,6 @@ var ids = gettevenMoves(obj)
         text-align: center;
         border-bottom: 1px solid #fff;
     }
-
     .hex p {
         top: 50%;
         padding-bottom: 50%;
@@ -1053,10 +967,7 @@ var ids = gettevenMoves(obj)
         -ms-transform: translate3d(0, 100%, 0);
         transform: translate3d(0, 100%, 0);
     }
-
-
     /*** HOVER EFFECT  **********************************************************************/
-
     .hexLink:hover h1,
     .hexLink:focus h1,
     .hexLink:hover p,
@@ -1065,9 +976,7 @@ var ids = gettevenMoves(obj)
         -ms-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
     }
-
     /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
-
     @media (min-width:1501px) {
         /* <- 5-4  hexagons per row */
         body {
@@ -1087,7 +996,6 @@ var ids = gettevenMoves(obj)
             /*  = width of .hex / 2  to indent even rows */
         }
     }
-
     @media (max-width: 1500px) and (min-width:1201px) {
         /* <- 5-4  hexagons per row */
         .hexGrid {
@@ -1103,7 +1011,6 @@ var ids = gettevenMoves(obj)
             /*  = width of .hex / 2  to indent even rows */
         }
     }
-
     @media (max-width: 1200px) and (min-width:901px) {
         /* <- 4-3  hexagons per row */
         .hexGrid {
@@ -1118,7 +1025,6 @@ var ids = gettevenMoves(obj)
             /* margin-left:12.5%;   = width of .hex / 2  to indent even rows */
         }
     }
-
     @media (max-width: 900px) and (min-width:601px) {
         /* <- 3-2  hexagons per row */
         .hexGrid {
@@ -1133,119 +1039,92 @@ var ids = gettevenMoves(obj)
             /* margin-left:16.666%;   = width of .hex / 2  to indent even rows */
         }
     }
-
     @media (max-width: 600px) {
         /* <- 2-1  hexagons per row */
         .hexGrid {
-
             margin-left: 27px;
         }
         .hex {
             width: 10%;
             /* = 100 / 3 */
             margin-bottom: 61px;
-
         }
         .hex:nth-child(3n+3) {
             /* first hexagon of even rows */
             /* margin-left:25%;   = width of .hex / 2  to indent even rows */
         }
     }
-
     @media (max-width: 400px) {
         .hexGrid {
             font-size: 13px;
         }
     }
-
     .hexGrid {
         margin-bottom: -55px;
     }
-
     .dorow:nth-child(odd) {
         margin-left: 70px;
     }
-
     .greybg {
         content: url("grey.jpg");
     }
-
     .orangebg {
         content: url("oring.jpg");
     }
-
     .pinkbg {
         content: url("rose.jpg");
     }
-
     .orange.star.greybg {
         content: url("grey-star-gold.jpg");
     }
-
     .pink.star.greybg {
         content: url("grey-star-rose.jpg");
     }
-
     .orange.triangle.greybg {
         content: url("grey-triangal-oringe.jpg");
     }
-
     .pink.triangle.greybg {
         content: url("grey-triangal-rose.jpg");
     }
-
     .orange.star.pinkbg {
         content: url("pink-star (2).jpg");
     }
-
     .pink.star.pinkbg {
         content: url("pink-star (1).jpg");
     }
-
     .orange.triangle.pinkbg {
         content: url("pink-oringe-triangle.jpg");
     }
-
     .pink.triangle.pinkbg {
         content: url("pink-triangle.jpg");
     }
-
     .orange.star.orangebg {
         content: url("oring-star.jpg");
     }
-
     .pink.star.orangebg {
         content: url("oring-pink-star.jpg");
     }
-
     .orange.triangle.orangebg {
         content: url("oring-t.jpg");
     }
-
     .pink.triangle.orangebg {
         content: url("oring-pink-tringale.jpg");
     }
-
     .orange.reversetriangle.greybg {
         content: url("grey-reversetriangal-oringe - Copy.jpg");
     }
-
     .pink.reversetriangle.greybg {
         content: url("grey-reversetriangal-rose - Copy.jpg");
     }
-
     .orange.reversetriangle.orangebg {
         content: url("oring-reversetriangale - .jpg");
     }
-
     .pink.reversetriangle.orangebg {
         content: url("oring-pink-reversetringale - Copy.jpg");
     }
-
     .orange.reversetriangle.pinkbg {
         content: url("pink-oringebg-revertriangle .jpg");
     }
-
     .pink.reversetriangle.pinkbg {
         content: url("pink-reversttriangle.jpg");
     }
