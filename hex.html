@@ -707,13 +707,17 @@ if(mbp[i].id != 't'+ obj.x + obj.y){mbp[i].classList.remove('movedbefor')}
                         move[i].classList.remove(obj.shape);
                         move[i].classList.remove(obj.coler);
                         move[i].classList.remove('shape');
+						move[i].classList.remove('transparent');
                         move[i].classList.remove('moving');
+						
 						
                     } else {
                         move[i].addEventListener("mouseover", funt)
                         move[i].addEventListener("mouseout", remt)
                         move[i].addEventListener("click", domoving)
+						move[i].classList.remove('transparent');
                         move[i].classList.remove('moving');
+						
 						
                     }
                 }
@@ -737,12 +741,14 @@ if(mbp[i].id != 't'+ obj.x + obj.y){mbp[i].classList.remove('movedbefor')}
                         move[i].classList.remove(obj.shape);
                         move[i].classList.remove(obj.coler);
                         move[i].classList.remove('shape');
+						move[i].classList.remove('transparent');
                         move[i].classList.remove('moving');
 						
                     } else {
                         move[i].addEventListener("mouseover", funt)
                         move[i].addEventListener("mouseout", remt)
                         move[i].addEventListener("click", domoving)
+						move[i].classList.remove('transparent');
                         move[i].classList.remove('moving');
 						
                     }
@@ -767,12 +773,14 @@ if(mbp[i].id != 't'+ obj.x + obj.y){mbp[i].classList.remove('movedbefor')}
                         move[i].classList.remove(obj.shape);
                         move[i].classList.remove(obj.coler);
                         move[i].classList.remove('shape');
+						move[i].classList.remove('transparent');
                         move[i].classList.remove('moving');
 						
                     } else {
                         move[i].addEventListener("mouseover", funt)
                         move[i].addEventListener("mouseout", remt)
                         move[i].addEventListener("click", domoving)
+						move[i].classList.remove('transparent');
                         move[i].classList.remove('moving');
 						
                     }
