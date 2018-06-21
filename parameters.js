@@ -1,7 +1,7 @@
 var game = game || {};
 game.rows = 7;
 game.pink = game.pink || {};
-game.pink.cells = [ '33', '42', '44', '52', '53', '43','32'];
+game.pink.cells = [ '23', '32', '33', '42', '43', '44'];
 game.orange = game.orange || {};
 game.orange.cells = ['16', '17', '26', '27', '28', '36', '37'];
 game.pink.stars = ['13','16','33'];
