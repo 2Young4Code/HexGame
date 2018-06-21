@@ -285,7 +285,7 @@ console.log(game);
 		}
 		}
 		if(orangeRTriangles.length > 0){
-		for(var i = 0; i< pinkTriangles.length; i++){
+		for(var i = 0; i< orangeRTriangles.length; i++){
 		 document.getElementById('t' + orangeRTriangles[i]).classList.add('shape');
          document.getElementById('t' + orangeRTriangles[i]).classList.add('reversetriangle');
          document.getElementById('t' + orangeRTriangles[i]).classList.add('orange');
@@ -808,17 +808,20 @@ if(mbp[i].id != 't'+ obj.x + obj.y){mbp[i].classList.remove('movedbefor')}
         }
     }
     var winner = function(obj) {
+	debugger;
         if (obj.coler == 'orange') {
+		var orange = game.orange.stars.length+game.orange.trangles.length+game.orange.reverseTriangles.length
             var sum = document.getElementsByClassName('orange pinkbg')
-            if (sum.length == 6) {
+            if (sum.length == orange) {
                 if (confirm('orange wins\nwant to play again ') == true) {
                     document.location.reload()
                 }
             }
         }
         if (obj.coler == 'pink') {
+		var pink = game.pink.stars.length+game.pink.trangles.length+game.pink.reverseTriangles.length
             var sum = document.getElementsByClassName('pink orangebg')
-            if (sum.length == 6) {
+            if (sum.length == pink) {
                 if (confirm('pink wins\nwant to play again') == true) {
                     document.location.reload()
                 }
