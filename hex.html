@@ -630,7 +630,7 @@ var ids = gettevenMoves(obj)
 		notpos[i].removeEventListener('mouseover',funt)
 		notpos[i].removeEventListener('mouseout',remt)
 		notpos[i].removeEventListener('click',domoving)
-		notpos[i].classList.remove('movedbefor')
+	
 		
 		}
 		
@@ -656,7 +656,7 @@ var ids = gettevenMoves(obj)
 		notpos[i].removeEventListener('mouseover',funt)
 		notpos[i].removeEventListener('mouseout',remt)
 		notpos[i].removeEventListener('click',domoving)
-		notpos[i].classList.remove('movedbefor')
+		
 		
 		}
 		
@@ -688,14 +688,18 @@ var ids = gettevenMoves(obj)
 		
         winner(obj)
 		turns(obj)
-        document.getElementsByClassName("pos")[0].classList.remove('pos')   
+        document.getElementsByClassName("pos")[0].classList.remove('pos')  
+if(obj.coler == 'orange'){
 		var mbo = document.getElementsByClassName("orange movedbefor");
 for(var i = 0;i<mbo.length;i++){
 if(mbo[i].id != 't'+ obj.x + obj.y){mbo[i].classList.remove('movedbefor')}
 }
+}
+if(obj.coler == 'pink'){
 var mbp = document.getElementsByClassName("pink movedbefor");
 for(var i = 0;i<mbp.length;i++){
 if(mbp[i].id != 't'+ obj.x + obj.y){mbp[i].classList.remove('movedbefor')}
+}
 }
 				
 		
