@@ -169,14 +169,14 @@ console.log(game);
         y = obj.y;
         var ids = [];
         x = Number(x) + 2
-        if (x > -1 && x < 10 && y > -1 && y < 10) {
+        if (x > -1 && x < game.rows && y > -1 && y < 10) {
             var sum = 't' + x + y
             ids.push(document.getElementById(sum).id)
         }
         x = x - 2;
         x = Number(x) - 1;
         y = y - 2;
-        if (x > -1 && x < 10 && y > -1 && y < 10) {
+        if (x > -1 && x < game.rows && y > -1 && y < 10) {
             var sum = 't' + x + y
             ids.push(document.getElementById(sum).id)
         }
@@ -184,7 +184,7 @@ console.log(game);
         y = Number(y) + 2;
         x = Number(x) - 1;
         y = Number(y) + 1
-        if (x > -1 && x < 10 && y > -1 && y < 10) {
+        if (x > -1 && x < game.rows && y > -1 && y < 10) {
             var sum = 't' + x + y
             ids.push(document.getElementById(sum).id)
         }
