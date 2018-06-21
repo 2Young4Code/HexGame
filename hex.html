@@ -324,6 +324,13 @@ console.log(game);
             move[i].addEventListener("click", newturn);
         }
     }
+    var donothing = function() {
+        var move = document.getElementsByClassName('moving');
+        for (var i = 0; i < move.length; i++) {
+            move[i].addEventListener("click", function(){console.log('works')});
+        }
+    }
+
     var newturn = function() {
        debugger;
       
@@ -392,11 +399,14 @@ console.log(game);
                     document.getElementById(ids[i]).classList.remove(obj.coler);
                     document.getElementById(ids[i]).classList.remove('shape');
                     document.getElementById(ids[i]).classList.remove('moving');
+				    document.getElementById(ids[i]).classList.remove('transparent');
+					document.getElementById(ids[i]).removeEventListener('click',makeonclick);
                 }
             }
 			
             document.getElementById('t' + obj.x + obj.y).classList.remove('pos');
             document.getElementById('t' + obj.x + obj.y).classList.remove('moving');
+			document.getElementById('t' + obj.x + obj.y).classList.remove('transparent');
 			
 			
         }
@@ -568,6 +578,8 @@ var ids = gettevenMoves(obj)
             console.log(ids);
             for (var i = 0; i < ids.length; i++) {
                 if (document.getElementById(ids[i]).classList.contains("shape") == false) {
+				    document.getElementById(ids[i]).classList.add(obj.shape)
+                    document.getElementById(ids[i]).classList.add(obj.coler)
                     document.getElementById(ids[i]).classList.add("shape")
                     document.getElementById(ids[i]).classList.add("moving")
                 }
@@ -607,14 +619,14 @@ var ids = gettevenMoves(obj)
 		}
 		for(var i = 0;i<notpos.length;i++){
 		
-		if(document.getElementById(allShapes[i].id).classList.contains("movedbefor") == false){
+		if(document.getElementById(notpos[i].id).classList.contains("movedbefor") == false){
 		notpos[i].addEventListener('mouseover',funt)
 		notpos[i].addEventListener('mouseout',remt)
 		
 		notpos[i].addEventListener('click',domoving)
 		
 		}
-		if(document.getElementById(allShapes[i].id).classList.contains("movedbefor")){
+		if(document.getElementById(notpos[i].id).classList.contains("movedbefor")){
 		notpos[i].removeEventListener('mouseover',funt)
 		notpos[i].removeEventListener('mouseout',remt)
 		notpos[i].removeEventListener('click',domoving)
@@ -633,13 +645,13 @@ var ids = gettevenMoves(obj)
 		
 		}
 		for(var i = 0;i<notpos.length;i++){
-		if(document.getElementById(allShapes[i].id).classList.contains("movedbefor") == false){
+		if(document.getElementById(notpos[i].id).classList.contains("movedbefor") == false){
 		notpos[i].addEventListener('mouseover',funt)
 		notpos[i].addEventListener('mouseout',remt)
 		
 		notpos[i].addEventListener('click',domoving)
 		}
-		if(document.getElementById(allShapes[i].id).classList.contains("movedbefor")){
+		if(document.getElementById(notpos[i].id).classList.contains("movedbefor")){
 		notpos[i].removeEventListener('mouseover',funt)
 		notpos[i].removeEventListener('mouseout',remt)
 		notpos[i].removeEventListener('click',domoving)
@@ -665,7 +677,7 @@ var ids = gettevenMoves(obj)
         };
         console.log(obj);
 		
-        if (document.getElementById('t' + obj.x + obj.y).classList.contains('pos') == false && document.getElementById('t' + obj.x + obj.y).classList.contains('moving')) {
+        if (document.getElementById('t' + obj.x + obj.y).classList.contains('pos') == false && document.getElementById('t' + obj.x + obj.y).classList.contains('moving') && document.getElementById('t' + obj.x + obj.y).classList.contains('movedbefor') == false) {
 		    
             doonclick(obj)
 
@@ -675,14 +687,7 @@ var ids = gettevenMoves(obj)
         winner(obj)
 		turns(obj)
         document.getElementsByClassName("pos")[0].classList.remove('pos')   
-var mbo = document.getElementsByClassName("orange movedbefor");
-for(var i = 0;i<mbo.length;i++){
-if(mbo[i].id != 't'+ obj.x + obj.y){mbo[i].classList.remove('movedbefor')}
-}
-var mbp = document.getElementsByClassName("pink movedbefor");
-for(var i = 0;i<mbp.length;i++){
-if(mbp[i].id != 't'+ obj.x + obj.y){mbp[i].classList.remove('movedbefor')}
-}				
+				
 		
     }
 	
